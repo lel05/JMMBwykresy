@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -87,8 +88,15 @@ namespace JMMB
         void Zapisz(FrameworkElement visual, string fileName)
         {
             var encoder = new PngBitmapEncoder();
-            
-            //var bitmap = new RenderTargetBitmap((int)visual.);
+
+            var bitmap = new RenderTargetBitmap((int)visual.ActualWidth, (int)visual.ActualHeight, 96, 96, PixelFormats.Pbgra32);
+            bitmap.Render(visual);
+            encoder.Frames.Add(BitmapFrame.Create(bitmap));
+
+            using (var stream = new FileStream(fileName, FileMode.Create))
+            {
+                encoder.Save(stream);
+            }
         }
     }
 }
