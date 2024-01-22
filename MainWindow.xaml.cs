@@ -33,7 +33,7 @@ namespace JMMB
                 okno.Show();
             }catch
             {
-
+                
             }
         }
         private void Liniowa_Click(object sender, RoutedEventArgs e)

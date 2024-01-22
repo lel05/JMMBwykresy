@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using LiveCharts;
+using LiveCharts.Defaults;
 using LiveCharts.Wpf;
 
 namespace JMMB
@@ -29,6 +30,7 @@ namespace JMMB
         }
 
         int tryb;
+        public ChartValues<ObservablePoint> ChartValues { get; set; }
         public OknoWykresu(double a, double b, double c, int tryb)
         {
             this.a = a;
@@ -37,8 +39,39 @@ namespace JMMB
             this.tryb = tryb;
 
             InitializeComponent();
-
             DataContext = this;
+
+            ChartValues = new ChartValues<ObservablePoint>();
+
+            //rysowanie funkcji kwadratowej
+            if (tryb == 1)
+            {
+                for (double x = -10; x <= 10; x = +0.1)
+                {
+                    double y = a * x * x + b * x + c;
+                    ChartValues.Add(new ObservablePoint(x, y));
+                }
+            }
+
+            //rysowanie funkcji liniowej
+            if (tryb == 2)
+            {
+                for (double x = -10; x <= 10; x = +0.1)
+                {
+                    double y = a * x + b;
+                    ChartValues.Add(new ObservablePoint(x, y));
+                }
+            }
+
+            //rysowanie funkcji wykladniczej
+            if (tryb == 3)
+            {
+                for (double x = -10; x <= 10; x = +0.1)
+                {
+                    double y = 1 / (a * x) + b;
+                    ChartValues.Add(new ObservablePoint(x, y));
+                }
+            }
         }
 
 
