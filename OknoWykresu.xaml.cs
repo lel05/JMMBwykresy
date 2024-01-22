@@ -22,6 +22,12 @@ namespace JMMB
     public partial class OknoWykresu : Window
     {
         double a, b, c;
+
+        private void SaveImage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         int tryb;
         public OknoWykresu(double a, double b, double c, int tryb)
         {
