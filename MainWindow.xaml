@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JMMB"
         mc:Ignorable="d"
-        Title="Wykresy" Height="450" Width="800">
-    <Grid>
+        Title="Wykresy" Height="200" Width="800">
+    <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -19,31 +19,34 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Content="A:" Grid.Column="0" Grid.Row="0"/>
-            <Label Content="B:" Grid.Column="0" Grid.Row="1"/>
-            <Label Content="C:" Grid.Column="0" Grid.Row="2"/>
+            <Label Content="A:" Grid.Column="0" Grid.Row="1"/>
+            <Label Content="B:" Grid.Column="0" Grid.Row="2"/>
+            <Label Content="C:" Grid.Column="0" Grid.Row="3"/>
 
-            <TextBox x:Name="kwadratowaTxtA" Grid.Column="1" Grid.Row="0" Width="50" Height="20" HorizontalAlignment="Left">
+            <Label Content="Wykres Kwadratowy" Grid.ColumnSpan="2" Grid.Row="0" FontWeight="Bold"/>
+
+            <TextBox x:Name="kwadratowaTxtA" Grid.Column="1" Grid.Row="1" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBox x:Name="kwadratowaTxtB" Grid.Column="1" Grid.Row="1" Width="50" Height="20">
+            <TextBox x:Name="kwadratowaTxtB" Grid.Column="1" Grid.Row="2" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBox x:Name="kwadratowaTxtC" Grid.Column="1" Grid.Row="2" Width="50" Height="20">
+            <TextBox x:Name="kwadratowaTxtC" Grid.Column="1" Grid.Row="3" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -51,7 +54,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="3" VerticalAlignment="Center" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
+            <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="4" VerticalAlignment="Center" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -66,23 +69,26 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Content="A:" Grid.Column="0" Grid.Row="0"/>
-            <Label Content="B:" Grid.Column="0" Grid.Row="1"/>
+            <Label Content="Wykres Liniowy" Grid.ColumnSpan="2" Grid.Row="0" FontWeight="Bold"/>
 
-            <TextBox x:Name="liniowaTxtA" Grid.Column="1" Grid.Row="0" Width="50" Height="20">
+            <Label Content="A:" Grid.Column="0" Grid.Row="1"/>
+            <Label Content="B:" Grid.Column="0" Grid.Row="2"/>
+
+            <TextBox x:Name="liniowaTxtA" Grid.Column="1" Grid.Row="1" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBox x:Name="liniowaTxtB" Grid.Column="1" Grid.Row="1" Width="50" Height="20">
+            <TextBox x:Name="liniowaTxtB" Grid.Column="1" Grid.Row="2" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -90,7 +96,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="2" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
+            <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="3" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -104,23 +110,26 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Content="A:" Grid.Column="0" Grid.Row="0"/>
-            <Label Content="B:" Grid.Column="0" Grid.Row="1"/>
+            <Label Content="Wykres Wykładniczy" Grid.ColumnSpan="2" Grid.Row="0" FontWeight="Bold"/>
 
-            <TextBox x:Name="wykladniczaTxtA" Grid.Column="1" Grid.Row="0" Width="50" Height="20">
+            <Label Content="A:" Grid.Column="0" Grid.Row="1"/>
+            <Label Content="B:" Grid.Column="0" Grid.Row="2"/>
+
+            <TextBox x:Name="wykladniczaTxtA" Grid.Column="1" Grid.Row="1" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBox x:Name="wykladniczaTxtB" Grid.Column="1" Grid.Row="1" Width="50" Height="20">
+            <TextBox x:Name="wykladniczaTxtB" Grid.Column="1" Grid.Row="2" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -128,7 +137,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="2" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
+            <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="3" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
