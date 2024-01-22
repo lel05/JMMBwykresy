@@ -23,7 +23,48 @@ namespace JMMB
 
         private void Kwadratowa_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                double a = double.Parse(kwadratowaTxtA.Text);
+                double b = double.Parse(kwadratowaTxtB.Text);
+                double c = double.Parse(kwadratowaTxtC.Text);
 
+                OknoWykresu okno = new OknoWykresu(a, b, c, 1);
+                okno.Show();
+            }catch
+            {
+                MessageBox.Show("Niepoprawne dane.", "Błąd!");
+            }
+        }
+        private void Liniowa_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double a = double.Parse(liniowaTxtA.Text);
+                double b = double.Parse(liniowaTxtB.Text);
+
+                OknoWykresu okno = new OknoWykresu(a, b, 0, 2);
+                okno.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Niepoprawne dane.", "Błąd!");
+            }
+        }
+        private void Logarytmiczna_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                double a = double.Parse(logarytmicznaTxtA.Text);
+                double b = double.Parse(logarytmicznaTxtB.Text);
+
+                OknoWykresu okno = new OknoWykresu(a, b, 0, 3);
+                okno.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Niepoprawne dane.", "Błąd!");
+            }
         }
     }
 }

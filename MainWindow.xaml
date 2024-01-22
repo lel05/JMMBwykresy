@@ -15,10 +15,12 @@
 
         <Grid Grid.Column="0">
             <Grid.RowDefinitions>
+
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
+
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -66,10 +68,12 @@
 
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
+
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
+
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -98,6 +102,7 @@
             </TextBox>
 
             <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="4" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
+
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -125,13 +130,16 @@
             <Label Content="B:" Grid.Column="0" Grid.Row="2"/>
 
             <TextBox x:Name="wykladniczaTxtA" Grid.Column="1" Grid.Row="1" Width="50" Height="20" HorizontalAlignment="Left">
+
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
+
             <TextBox x:Name="wykladniczaTxtB" Grid.Column="1" Grid.Row="2" Width="50" Height="20" HorizontalAlignment="Left">
+
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -140,6 +148,7 @@
             </TextBox>
 
             <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="4" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
+
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
