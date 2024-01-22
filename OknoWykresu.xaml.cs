@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using LiveCharts;
 using LiveCharts.Defaults;
 using LiveCharts.Wpf;
+using Microsoft.Win32;
 
 namespace JMMB
 {
@@ -71,8 +72,23 @@ namespace JMMB
 
         private void SaveImage_Click(object sender, RoutedEventArgs e)
         {
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = "Pliki obrazów (*.png)|*.png",
+                DefaultExt = "png",
+                Title = "Zapisz wykres"
+            };
 
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                Zapisz(chart, saveFileDialog.FileName);
+            }
         }
-
+        void Zapisz(FrameworkElement visual, string fileName)
+        {
+            var encoder = new PngBitmapEncoder();
+            
+            //var bitmap = new RenderTargetBitmap((int)visual.);
+        }
     }
 }
