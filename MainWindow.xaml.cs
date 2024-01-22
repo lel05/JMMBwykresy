@@ -23,6 +23,25 @@ namespace JMMB
 
         private void Kwadratowa_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                double a = double.Parse(kwadratowaTxtA.Text);
+                double b = double.Parse(kwadratowaTxtB.Text);
+                double c = double.Parse(kwadratowaTxtC.Text);
+
+                OknoWykresu okno = new OknoWykresu(a, b, c, 1);
+                okno.Show();
+            }catch
+            {
+
+            }
+        }
+        private void Liniowa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Wykladnicza_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
