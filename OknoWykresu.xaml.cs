@@ -63,7 +63,7 @@ namespace JMMB
             {
                 for (double x = -10; x <= 10; x += 0.1)
                 {
-                    double y = 1 / (a * x) + b;
+                    double y = a * Math.Log10(x) + b;
                     ChartValues.Add(new ObservablePoint(x, y));
                 }
             }

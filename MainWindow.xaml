@@ -96,7 +96,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="3" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
+            <Button Content="Wygeneruj wykres" Click="Liniowa_Click" Grid.ColumnSpan="2" Grid.Row="3" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -117,19 +117,19 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Label Content="Wykres Wykładniczy" Grid.ColumnSpan="2" Grid.Row="0" FontWeight="Bold"/>
+            <Label Content="Wykres Logarytmiczny" Grid.ColumnSpan="2" Grid.Row="0" FontWeight="Bold"/>
 
             <Label Content="A:" Grid.Column="0" Grid.Row="1"/>
             <Label Content="B:" Grid.Column="0" Grid.Row="2"/>
 
-            <TextBox x:Name="wykladniczaTxtA" Grid.Column="1" Grid.Row="1" Width="50" Height="20" HorizontalAlignment="Left">
+            <TextBox x:Name="logarytmicznaTxtA" Grid.Column="1" Grid.Row="1" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </TextBox.Resources>
             </TextBox>
-            <TextBox x:Name="wykladniczaTxtB" Grid.Column="1" Grid.Row="2" Width="50" Height="20" HorizontalAlignment="Left">
+            <TextBox x:Name="logarytmicznaTxtB" Grid.Column="1" Grid.Row="2" Width="50" Height="20" HorizontalAlignment="Left">
                 <TextBox.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
@@ -137,7 +137,7 @@
                 </TextBox.Resources>
             </TextBox>
 
-            <Button Content="Wygeneruj wykres" Click="Kwadratowa_Click" Grid.ColumnSpan="2" Grid.Row="3" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
+            <Button Content="Wygeneruj wykres" Click="Logarytmiczna_Click" Grid.ColumnSpan="2" Grid.Row="3" Background="CornflowerBlue" Foreground="WhiteSmoke" Width="100">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

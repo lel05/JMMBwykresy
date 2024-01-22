@@ -51,12 +51,12 @@ namespace JMMB
                 MessageBox.Show("Niepoprawne dane.", "Błąd!");
             }
         }
-        private void Wykladnicza_Click(object sender, RoutedEventArgs e)
+        private void Logarytmiczna_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                double a = double.Parse(wykladniczaTxtA.Text);
-                double b = double.Parse(wykladniczaTxtB.Text);
+                double a = double.Parse(logarytmicznaTxtA.Text);
+                double b = double.Parse(logarytmicznaTxtB.Text);
 
                 OknoWykresu okno = new OknoWykresu(a, b, 0, 3);
                 okno.Show();
