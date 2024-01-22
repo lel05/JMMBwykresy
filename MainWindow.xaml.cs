@@ -33,16 +33,38 @@ namespace JMMB
                 okno.Show();
             }catch
             {
-                
+                MessageBox.Show("Niepoprawne dane.", "Błąd!");
             }
         }
         private void Liniowa_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                double a = double.Parse(liniowaTxtA.Text);
+                double b = double.Parse(liniowaTxtB.Text);
 
+                OknoWykresu okno = new OknoWykresu(a, b, 0, 2);
+                okno.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Niepoprawne dane.", "Błąd!");
+            }
         }
         private void Wykladnicza_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                double a = double.Parse(wykladniczaTxtA.Text);
+                double b = double.Parse(wykladniczaTxtB.Text);
 
+                OknoWykresu okno = new OknoWykresu(a, b, 0, 3);
+                okno.Show();
+            }
+            catch
+            {
+                MessageBox.Show("Niepoprawne dane.", "Błąd!");
+            }
         }
     }
 }

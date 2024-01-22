@@ -24,11 +24,6 @@ namespace JMMB
     {
         double a, b, c;
 
-        private void SaveImage_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         int tryb;
         public ChartValues<ObservablePoint> ChartValues { get; set; }
         public OknoWykresu(double a, double b, double c, int tryb)
@@ -39,14 +34,14 @@ namespace JMMB
             this.tryb = tryb;
 
             InitializeComponent();
-            DataContext = this;
 
+            DataContext = this;
             ChartValues = new ChartValues<ObservablePoint>();
 
             //rysowanie funkcji kwadratowej
             if (tryb == 1)
             {
-                for (double x = -10; x <= 10; x = +0.1)
+                for (double x = -10; x <= 10; x += 0.1)
                 {
                     double y = a * x * x + b * x + c;
                     ChartValues.Add(new ObservablePoint(x, y));
@@ -56,7 +51,7 @@ namespace JMMB
             //rysowanie funkcji liniowej
             if (tryb == 2)
             {
-                for (double x = -10; x <= 10; x = +0.1)
+                for (double x = -10; x <= 10; x += 0.1)
                 {
                     double y = a * x + b;
                     ChartValues.Add(new ObservablePoint(x, y));
@@ -66,7 +61,7 @@ namespace JMMB
             //rysowanie funkcji wykladniczej
             if (tryb == 3)
             {
-                for (double x = -10; x <= 10; x = +0.1)
+                for (double x = -10; x <= 10; x += 0.1)
                 {
                     double y = 1 / (a * x) + b;
                     ChartValues.Add(new ObservablePoint(x, y));
@@ -74,6 +69,10 @@ namespace JMMB
             }
         }
 
+        private void SaveImage_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
 
     }
 }
