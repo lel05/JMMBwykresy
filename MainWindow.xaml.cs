@@ -20,5 +20,10 @@ namespace JMMB
         {
             InitializeComponent();
         }
+
+        private void Kwadratowa_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
